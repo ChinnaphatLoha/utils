@@ -13,9 +13,9 @@ const modifyStyle = (element, styles = {}) => {
   }
 };
 
-const addGlobalEventListener = (type, element, callback) => {
+const addGlobalEventListener = (type, selector, callback) => {
   document.addEventListener(type, (e) => {
-    if (e.target.matches(element)) callback(e);
+    if (e.target.matches(selector)) callback(e);
   });
 };
 
